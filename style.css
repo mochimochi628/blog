@@ -1,0 +1,584 @@
+@charset "UTF-8";
+/*
+Theme Name: MY THEME
+Author: Saya Kato
+Description: オリジナルテーマです
+Version: 1.0
+*/
+
+.alignleft {
+	float: left;
+	margin-left: 0;
+	margin-right: 1em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1em;
+	margin-right: 0;
+}
+
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-categories.aligncenter,
+.wp-block-latest-posts.aligncenter,
+.wp-block-archives.aligncenter,
+.wp-block-tag-cloud.aligncenter,
+.wp-block-latest-comments.aligncenter,
+.wp-block-rss.aligncenter {
+	text-align: center;
+}
+
+.wp-block-image,
+.wp-block-image img {
+	max-width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+body {
+	box-sizing: border-box;
+}
+
+body *,
+body *::before,
+body *::after {
+	box-sizing: inherit;
+}
+
+/*変数*/
+:root {
+	--f1: 2.44em; /*39.04px*/ 
+	--f2: 1.95em; /*31.2px*/
+	--f3: 1.56em; /*24.96px*/
+	--f4: 1.25em; /*20px*/
+	--f5: 1em; /*16px*/
+	--f6: 0.8em; /*12.8px*/
+	
+	--basecolor: #4d4b4b; /*基本色*/
+	--gradient: linear-gradient( 69.8deg,  rgba(0,51,102,1) 2.6%, rgba(0,102,255,1) 97.7% );
+	
+	--myfont: 'M PLUS Rounded 1c', sans-serif;
+	
+	--mywidth: 720px; /*標準幅*/
+}
+
+/*フォント*/
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+p {
+	line-height: 1.8;
+	font-size: var(--f5);
+}
+
+h1 {
+	font-size: var(--f1);
+}
+h2 {
+	font-size: var(--f2);
+}
+h3 {
+	font-size: var(--f3);
+}
+h4 {
+	font-size: var(--f4);
+}
+h5 {
+	font-size: var(--f5);
+}
+h6 {
+	font-size: var(--f6);
+}
+
+h2 {
+	border-left: solid 14px var(--basecolor);
+	padding-left: 14px;
+}
+
+h3 {
+	border-bottom: solid 2px var(--basecolor);
+	padding-left: 5px;
+}
+
+/*タイトルの文字大きさ変更*/
+.has-huge-font-size {
+	font-size: 35px;
+}
+
+/*横幅*/
+body {
+	margin: 0;
+}
+
+.mycontainer {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.mycontainer > .alignfull {
+	margin-left: -10px;
+	margin-right: -10px;
+	max-width: none;
+	width: auto;
+}
+
+@media (min-width: 740px) {
+	.mycontainer {
+		max-width: none;
+		margin-left:
+			calc((100vw - var(--mywidth)) /2);
+		margin-right:
+			calc((100vw - var(--mywidth)) /2);
+	}
+	
+	.mycontainer > .alignfull {
+		margin-left:
+			calc((100vw - var(--mywidth)) /2 * -1);
+		margin-right:
+			calc((100vw - var(--mywidth)) /2 * -1);
+	}
+	
+	.mycontainer > .alignwide {
+		margin-left:
+			calc((100vw - var(--mywidth)) /4 * -1);
+		margin-right:
+			calc((100vw - var(--mywidth)) /4 * -1);
+		max-width: none;
+	width: auto;
+	}
+}
+
+@media (min-width: 1320px) {
+	.mycontainer > .alignwide {
+		margin-left: -150px;
+		margin-right: -150px;
+	}
+}
+
+/*記事に関する情報*/
+.myposthead {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.myposthead p {
+	color: var(--basecolor);
+	font-family: var(--myfont);
+	font-weight: bold;
+}
+
+/*リンク*/
+a {
+	color: var(--basecolor);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--basecolor);
+	opacity: 0.7;
+}
+
+/*記事に属するカテゴリー*/
+.post-categories {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	list-style-type: none;
+}
+
+.post-categories li:not(:last-child) {
+	margin-right: 10px;
+}
+
+.post-categories a {
+	padding: 3px 10px;
+	border: solid 1px currentColor;
+	border-radius: 10px;
+	color: var(--basecolor);
+	font-size: var(--f6);
+}
+
+.post-categories::before {
+	content: "\f318";
+	font-family: "dashicons";
+	color: var(--basecolor);
+	font-size: var(--f2);
+	line-height: 1;
+	margin-right: 5px;
+}
+
+/*スクリーンリーダー用のテキスト*/
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+/*前後の記事へのリンク*/
+.nav-links {
+	display: flex;
+	margin: 30px 0;
+	font-size: var(--f6);
+}
+
+.nav-previous {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.nav-next {
+	flex: 1;
+	margin-left: 10px;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.nav-previous::before {
+	content: "\f141";
+}
+
+.nav-next::after {
+	content: "\f139";
+}
+
+.nav-previous::before, .nav-next::after {
+	font-family: "dashicons";
+	color: var(--basecolor);
+	font-size: var(--f2);
+	line-height: 1;
+}
+
+/*ヘッダー*/
+.myhead > div {
+	text-align: center;
+	display: block;
+	align-items: center;
+	padding: 15px 0 20px;
+	color: #4d4b4b;
+}
+
+.myhead a {
+	font-size: var(--f3);
+	font-weight: bold;
+}
+
+.myhead p {
+	font-size: 14px;
+	margin-top: 0;
+}
+
+/*フッター*/
+.myfoot {
+	padding: 16px;
+	background-color: var(--basecolor);
+	color: #ffffff;
+	text-align: center;
+}
+
+/*記事一覧*/
+.mypostlist {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.mypostlist article {
+	width: 48%;
+	margin-bottom:  20px;
+	border: solid 1px #d3d3d3;
+	border-radius: 3px;
+}
+
+.mypostlist figure {
+	margin: 0;
+}
+
+.mypostlist img {
+	height: 200px;
+	object-fit: cover;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.mypostlist h2,
+.mypostlist h3 {
+	margin: 0;
+	padding: 10px 15px;
+	border: none;	
+	font-size: var(--f5);
+}
+
+.mypostlist span {
+	display: block;
+	margin: 0;
+	padding: 10px 15px;
+	border: none;
+	font-size: 13px;
+	text-align: right;
+	
+}
+
+/*関連記事*/
+.myrelated {
+	border: solid 2px var(--basecolor);
+	padding: 0 10px;
+}
+
+.myrelated h2 {
+	border-width: 5px;
+	color: var(--basecolor);
+	font-family: var(--myfont);
+	font-size: var(--f5);
+}
+
+.myrelated img {
+	height: 120px;
+}
+
+@media(min-width: 740px) {
+	.myrelated article {
+		width: 24%;
+	}
+	
+	.myrelated .mypostlist {
+		/*justify-content: flex-start;*/
+	}
+	
+	.myrelated article:not(:last-child) {
+		margin-right; calc(4% / 3);
+	}
+}
+
+/*ページネーション*/
+.pagination .nav-links {
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.pagination .page-numbers:not(:last-child) {
+	margin-right: 10px;
+}
+
+.pagination .page-numbers {	
+	display: inline-block;
+	height: 46px;
+	width: 46px;
+	border: solid 1px #d3d3d3;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 46px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.pagination a {
+	color: var(--basecolor);
+}
+
+.pagination .current {
+	color: #aaaaaa;
+	margin-right: 15px;
+}
+
+/*メニュー（サイド）*/
+.mymenu {
+	margin-top: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #fbf6e8;
+	border-radius: 3px;
+}
+
+.mymenu h2 {
+	padding: 10px;
+	border: none;
+	background-color: var(--basecolor);
+	color: #ffffff;
+	font-family: var(--myfont);
+	font-size: var(--f5);
+}
+
+/*CATEGORIESレイアウト崩れ修正*/
+.mymenu > a {
+	 display: none;
+}
+
+.mycontainer > a {
+	 display: none;
+}
+/*----------------------------*/
+
+.myprofile figure {
+	text-align: center;
+}
+
+.myprofile img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.myprofile strong {
+	display: block;
+	text-align: center;
+	font-family: var(--myfont);
+}
+
+.myprofile p {
+	font-size: var(--f6);
+}
+
+.widget ul {
+	padding: 0;
+	list-style-type: none;
+	font-size: var(--f6);
+}
+
+.widget li:not(last-child) {
+	margin-bottom: 5px;
+}
+
+.widget select {
+	width: 100%;
+	height: 40px;
+	border: solid 1px #aaaaaa;
+}
+
+@media(min-width: 740px) {
+	.mymenu-columns {
+		columns: 3;
+		column-gap: 30px;
+	}
+	
+	.mymenu-columns > section {
+		position: relative;
+		overflow: hidden;
+		break-inside: avoid;
+	}
+}
+
+/*上下の余白*/
+.mymargin {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/*お問い合わせ*/
+.wpcf7-text,
+.wpcf7-textarea {
+	width: 100%;
+	padding: 10px;
+	border: solid 1px #bbbbbb;
+}
+
+.wpcf7-submit {
+	width: 250px;
+	padding: 10px;
+	border: none;
+	background-color: #ffaa00;
+	-webkit-appearance: none;
+}
+
+/*ナビゲーションメニュー*/
+.mynav {
+	background-color: #4d4b4b;
+	font-size: var(--f5);
+}
+
+.mynav ul li a {
+	display: flex;
+}
+
+.mynav ul {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+}
+
+.mynav a {
+	color: #ffffff;
+	padding: 15px 45px;
+	transition: all 0.7s;
+}
+
+.mynav a:hover {
+	color: #ffffff;
+	opacity: 1;
+	transform: translatey(5px);	
+}
+
+/*シェアボタン*/
+.at-below-post {
+	margin-top: 30px;
+}
+
+.at-share-btn-elements {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*２段組み*/
+@media(min-width: 1320px) {
+	.mycols .mycontainer,
+	.mycols .alignwide,
+	.mycols .alignfull {
+		width: auto;
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.mycols .mymenu-columns {
+		columns: 1;
+	}
+	
+	.mycols {
+		display: flex;
+		margin: 50px calc((100vw - 1020px) / 2);
+		justify-content: space-between;
+	}
+	
+	.mycols .mycontent {
+		width: 68%;
+	}
+	
+	.mycols .mymenu {
+		width: 26%;
+		margin-top: 0;
+		padding: 10px;
+	}
+}
+
+/*カラムブロックのレスポンス*/
+@media(min-width: 600px) and (max-width: 781px) {
+	.myresp {
+		flex-wrap: nowrap;
+	}
+	
+	.myresp > *:not(:first-child) {
+		margin-left: 10px;
+	}
+}
