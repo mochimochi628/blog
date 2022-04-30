@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: 
+*/
+?>
+
 <?php get_header(); ?>
 
 <div class="mypostlist">
