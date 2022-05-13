@@ -320,6 +320,45 @@ a:hover {
 	text-align: left;
 }
 
+/*ページトップに戻るボタン*/
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 25px;
+  bottom: 67px;
+  background: #4d4b4b;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/*memo アイコンフォントを疑似要素で表示*/
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #ffffff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
 /*記事一覧*/
 .mypostlist {
 	display: flex;
