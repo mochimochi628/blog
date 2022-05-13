@@ -27,7 +27,7 @@
 	  
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7635107517418701" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.mochimochi628.com/public_html/wp-includes/js/wp-embed.min.js?ver=5.8.4" id="wp-embed-js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 　　    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
