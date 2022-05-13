@@ -32,7 +32,7 @@
 　　　　<a href="#"></a>
 　　</div>
 
-<script type="text/javascript">
+<script>
 	$(function(){	
 		var pagetop = $('#page_top'); 
 		// ボタン非表示
