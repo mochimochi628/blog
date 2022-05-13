@@ -29,8 +29,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-　　<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-　　<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+　　    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+　　    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
   </head>
 	
   <body <?php body_class(); ?>>
