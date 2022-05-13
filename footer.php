@@ -34,19 +34,22 @@
 
 <script type="text/javascript">
 	$(function(){	
-		var pagetop = $('#page_top');   
+		var pagetop = $('#page_top'); 
+		// ボタン非表示
 		pagetop.hide();
+		// 100px スクロールしたらボタン表示
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+			if ($(this).scrollTop() > 100) {
 				pagetop.fadeIn();
 			} else {
 				pagetop.fadeOut();
 			}
 		});
+		//0.5秒かけてトップへ移動
 		pagetop.click(function () {
 			$('body,html').animate({
 				scrollTop: 0
-			}, 500); //0.5秒かけてトップへ移動
+			}, 500); 
 			return false;
 		});
 	});
