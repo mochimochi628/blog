@@ -1,3 +1,9 @@
+<?php
+/*
+カテゴリー、月別アーカイブページ表示
+*/
+?>
+
 <?php get_header(); ?>
 
 <main class="mycontainer">
@@ -33,8 +39,8 @@
 </div>
 
 <?php the_posts_pagination( array(
-	'prev_text' => '<span class="dashicons dashicons-arrow-left-alt2"></span><span class="screen-reader-text">前へ</span>',
-	'next_text' => '<span class="dashicons dashicons-arrow-right-alt2"></span><span class="screen-reader-text">次へ</span>'
+    'prev_text' => '&lt;',
+　　'next_text' => '&gt;'
 )); ?>
 
 </div>
