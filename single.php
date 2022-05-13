@@ -1,3 +1,9 @@
+<?php
+/*
+各投稿記事ページ表示
+*/
+?>
+
 <?php get_header(); ?>
 	  
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
