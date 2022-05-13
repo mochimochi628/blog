@@ -1,3 +1,9 @@
+<?php
+/*
+固定ページ（サイトについて、プロフィール、お問い合わせ、etc...）表示
+*/
+?>
+
 <?php get_header(); ?>
 	  
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
