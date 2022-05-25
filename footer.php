@@ -1,3 +1,18 @@
+<div class="mycols">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7635107517418701"
+		 crossorigin="anonymous"></script>
+	<!-- display-ad -->
+	<ins class="adsbygoogle"
+		style="display:block"
+		data-ad-client="ca-pub-7635107517418701"
+		data-ad-slot="2501433810"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
 <footer class="myfoot">
 	<div class=alignwide>
 	    <div class="footer-menu">
