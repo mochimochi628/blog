@@ -14,7 +14,7 @@
 </div>
 
 <footer class="myfoot">
-	<div class=alignwide>
+	<div class=alignwide>	
 	    <div class="footer-menu">
 		  <ul class="footer-menu">
 			<li><a href="https://mochimochi628.com/" aria-current="page">ホーム</a></li>
@@ -44,31 +44,48 @@
     </script>
 
 　　<div id="page_top">
-　　　　<a href="#"></a>
+	  <a href="#"></a>
 　　</div>
 
-<script>
-	$(function(){	
-		var pagetop = $('#page_top'); 
-		// ボタン非表示
-		pagetop.hide();
-		// 100px スクロールしたらボタン表示
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				pagetop.fadeIn();
-			} else {
-				pagetop.fadeOut();
-			}
+	<script>
+		$(function(){	
+			var pagetop = $('#page_top');
+			// ボタン非表示
+			pagetop.hide();
+			// 100px スクロールしたらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					pagetop.fadeIn();
+				} else {
+					pagetop.fadeOut();
+				}
+			});
+			//0.5秒かけてトップへ移動
+			pagetop.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500); 
+				return false;
+			});
 		});
-		//0.5秒かけてトップへ移動
-		pagetop.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500); 
-			return false;
-		});
-	});
-</script>
+		
+		//ハンバーガーメニューのjQuery読み込み
+        $(function(){
+            $(".toggle").on("click", function(){
+                var rightVal = 0;
+                if($(this).hasClass("open")) {
+                    rightVal = -300;
+                    $(this).removeClass("open");
+                } else {
+                    $(this).addClass("open");
+                }
+ 
+                $(".mynav").stop().animate({
+                    right: rightVal
+                }, 200);
+            });
+        });
+	</script>
 
   </body>
 </html>
