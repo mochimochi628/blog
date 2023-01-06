@@ -30,9 +30,9 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-　　    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-　　    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+　　<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+　　<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
   </head>
 	
   <body <?php body_class(); ?>>
@@ -47,18 +47,27 @@
 		  <p><?php bloginfo('description'); ?></p>
 	  </div>
 	</header>
-	  
-	<?php if(has_nav_menu('primary')): ?>
-	  <nav class="mynav">
+	
+	<div class="container">
+		<!-- ハンバーガーメニュー --> 
+		<div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+    　  </div>
+		
+	    <?php if(has_nav_menu('primary')): ?>  
+	    <nav class="mynav">
 		  <div class="mycontainer">
 			  <div class="alignwide">
 			      <?php wp_nav_menu(array(
 					'theme_location' => 'primary',
 				  )); ?>
-			</div>
+			  </div>
 		  </div>
-	  </nav>
-	<?php endif; ?>
+	   </nav>
+	  <?php endif; ?>
+	</div>
 	
 	<div
 		 <?php if(current_theme_supports('mycols')): ?>
