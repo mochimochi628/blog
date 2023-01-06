@@ -643,3 +643,104 @@ a:hover {
 		margin-left: 10px;
 	}
 }
+
+/*ナビゲーションメニューのレスポンス（ハンバーガーメニュー）*/
+@media screen and (max-width: 781px) {
+  .container nav {
+    position: fixed;/*場所は固定*/
+    top: 0;/*上から0の位置*/
+    right: -250px;/*右から-200の位置*/
+    width: 250px;/*横幅*/
+    height: 100%;/*高さ*/
+    padding-top: 50px;/*上の余白*/
+    background: #4d4b4b;/*背景色*/
+    font-size: 14px;/*文字サイズ*/
+    box-sizing: border-box;/*要素を非表示に*/
+    z-index: 2
+  }
+
+  .container nav ul {
+    display:block;/*ブロック要素にする*/
+  }
+
+  .container nav li {
+    width: 100%;/*横幅*/
+    margin: 0 auto;/*中央よせ*/
+    border-bottom: solid 1px #fff;/*下にのみ線を付ける*/
+  }
+
+  .mynav  li:first-child{
+    border-top: solid 1px #fff;/*開始のみ上にも線を付ける*/
+    border-bottom: solid 1px #fff;/*下にのみ線を付ける*/
+}
+ 
+  .container nav ul li a {
+    color: #ffffff;/*リンク色*/
+    text-decoration: none;/*リストの●は表示しない*/
+  }
+ 
+  .container .toggle {
+    position: fixed;/*場所は固定*/
+    top: 20px;/*上から20pxの位置*/
+    right: 20px;/*右から20pxの位置*/
+    width: 30px;/*横幅*/
+    height: 24px;/*高さ*/
+    z-index: 3;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+  }
+ 
+  .container .toggle span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #666;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+  }
+ 
+  .container .toggle span:nth-child(1) {
+    top: 0;/*ハンバーガーメニュー上線*/
+  }
+ 
+  .container .toggle span:nth-child(2) {
+    top: 10px;/*ハンバーガーメニュー中線*/
+  }
+ 
+  .container .toggle span:nth-child(3) {
+    top: 20px;/*ハンバーガーメニュー下線*/
+  }
+ 
+  .container .toggle.open {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+ 
+  .container .toggle.open span {
+    background: #fff
+  }
+ 
+  .container .toggle.open span {
+    width: 24px;
+  }
+  .container .contents section p {
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    line-height: 1.4;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 6px #666
+  }
+ 
+  .container .contents section:nth-child(odd) p {
+    left: 10%
+  }
+ 
+  .container .contents section:nth-child(even) p {
+    right: 10%
+  }
+}
